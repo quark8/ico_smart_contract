@@ -29,7 +29,7 @@ contract('STQPreICO3', function(accounts) {
         softCap: web3.toWei(100, 'finney'),
         hardCap: web3.toWei(400, 'finney'),
         startTime: (new Date('Wed, 25 Oct 2017 19:00:00 GMT')).getTime() / 1000,
-        endTime: (new Date('Fri, 24 Nov 2017 23:59:59 GMT')).getTime() / 1000,
+        endTime: (new Date('Fri, 25 Nov 2017 00:00:00 GMT')).getTime() / 1000,
         maxTimeBonus: 33,
         firstPostICOTxFinishesSale: true,
         postICOTxThrows: false,

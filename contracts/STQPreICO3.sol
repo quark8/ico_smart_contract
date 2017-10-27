@@ -1,17 +1,17 @@
 pragma solidity 0.4.15;
 
 import './STQPreICOBase.sol';
-import './crowdsale/FundsRegistryWalletConnector.sol';
+import './crowdsale/ExternalAccountWalletConnector.sol';
 
 
 /// @title Storiqa pre-ICO contract
-contract STQPreICO3 is STQPreICOBase, FundsRegistryWalletConnector {
+contract STQPreICO3 is STQPreICOBase, ExternalAccountWalletConnector {
 
-    function STQPreICO3(address token, address[] fundOwners)
+    function STQPreICO3(address token, address wallet)
         STQPreICOBase(token)
-        FundsRegistryWalletConnector(fundOwners, 2)
+        ExternalAccountWalletConnector(wallet)
     {
-        require(3 == fundOwners.length);
+
     }
 
 
@@ -38,7 +38,7 @@ contract STQPreICO3 is STQPreICOBase, FundsRegistryWalletConnector {
 
     /// @notice end time of the pre-ICO
     function getEndTime() internal constant returns (uint) {
-        return 1511567999; //2017-11-24 23:59:59
+        return 1511568000; //2017-11-25 00:00:00
     }
 
     /// @notice pre-ICO bonus
